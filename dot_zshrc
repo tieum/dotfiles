@@ -96,6 +96,8 @@ eval "$(direnv hook zsh)"
 
 eval "$(starship init zsh)"
 
+eval $(chezmoi completion zsh)
+
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
 
 autoload -Uz compinit bashcompinit; compinit; bashcompinit
