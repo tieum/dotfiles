@@ -1,0 +1,78 @@
+# resize windows
+:: default : yabai -m config window_border off
+:: resize @ : yabai -m config window_border on
+cmd - r ; resize
+resize < escape ; default
+resize < return ; default
+resize < left : yabai -m window --resize left:100:0  ; yabai -m window --resize right:-100:0
+resize < right : yabai -m window --resize left:-100:0 ; yabai -m window --resize right:100:0
+resize < down : yabai -m window --resize top:0:-100  ; yabai -m window --resize bottom:0:100
+resize < up : yabai -m window --resize top:0:100   ; yabai -m window --resize bottom:0:-100
+
+# focus window
+cmd - left : yabai -m window --focus west
+cmd - right: yabai -m window --focus east
+cmd - up: yabai -m window --focus north 
+cmd - down : yabai -m window --focus south
+
+# move managed window
+shift + cmd - left : yabai -m window --warp west
+shift + cmd - right: yabai -m window --warp east
+shift + cmd - up : yabai -m window --warp north
+shift + cmd - down: yabai -m window --warp south
+
+#move space to next display
+cmd - m: index=$(yabai -m query --spaces | jq 'map(select(."has-focus" == true))[].index') && yabai -m space $index --display next || yabai -m space $index --display first
+
+# switch to desktop with back_and_forth feature
+cmd - 1 : [[ "one" == $(yabai -m query --spaces   | jq -r 'map(select(."has-focus" == true))[-1].label') ]] && yabai -m space --focus recent || yabai -m space --focus one
+cmd - 2 : [[ "two" == $(yabai -m query --spaces   | jq -r 'map(select(."has-focus" == true))[-1].label') ]] && yabai -m space --focus recent || yabai -m space --focus two
+cmd - 3 : [[ "three" == $(yabai -m query --spaces | jq -r 'map(select(."has-focus" == true))[-1].label') ]] && yabai -m space --focus recent || yabai -m space --focus three 
+cmd - 4 : [[ "four" == $(yabai -m query --spaces  | jq -r 'map(select(."has-focus" == true))[-1].label') ]] && yabai -m space --focus recent || yabai -m space --focus four 
+cmd - 5 : [[ "five" == $(yabai -m query --spaces  | jq -r 'map(select(."has-focus" == true))[-1].label') ]] && yabai -m space --focus recent || yabai -m space --focus five 
+cmd - 6 : [[ "six" == $(yabai -m query --spaces   | jq -r 'map(select(."has-focus" == true))[-1].label') ]] && yabai -m space --focus recent || yabai -m space --focus six 
+cmd - 7 : [[ "seven" == $(yabai -m query --spaces | jq -r 'map(select(."has-focus" == true))[-1].label') ]] && yabai -m space --focus recent || yabai -m space --focus seven 
+cmd - 8 : [[ "eight" == $(yabai -m query --spaces | jq -r 'map(select(."has-focus" == true))[-1].label') ]] && yabai -m space --focus recent || yabai -m space --focus eight 
+
+# send window to desktop and follow focus
+shift + cmd - 1 : yabai -m window --space  one;   yabai -m space --focus one
+shift + cmd - 2 : yabai -m window --space  two;   yabai -m space --focus two 
+shift + cmd - 3 : yabai -m window --space  three; yabai -m space --focus three
+shift + cmd - 4 : yabai -m window --space  four;  yabai -m space --focus four
+shift + cmd - 5 : yabai -m window --space  five;  yabai -m space --focus five
+shift + cmd - 6 : yabai -m window --space  six;   yabai -m space --focus six 
+shift + cmd - 7 : yabai -m window --space  seven; yabai -m space --focus seven
+shift + cmd - 8 : yabai -m window --space  eight; yabai -m space --focus eight
+
+# screenshot
+cmd + shift - s : screencapture -i /Users/tieum/Pictures/screenshot-$(date +%Y-%m-%d-%H%M).png
+
+# close window
+cmd - q : yabai -m window --close
+
+# toggle window zoom
+cmd - w : yabai -m window --toggle zoom-fullscreen
+cmd - e : yabai -m window --toggle zoom-parent
+
+# launch terminal
+cmd - return : test -S /tmp/kitty.sock && /Applications/kitty.app/Contents/MacOS/kitty || /Applications/kitty.app/Contents/MacOS/kitty --listen-on unix:/tmp/kitty.sock 
+
+# toggle window split type
+cmd + shift - v : yabai -m window --toggle split
+
+# float / unfloat window and center on screen
+cmd + shift - space : yabai -m window --toggle float --grid 4:4:1:1:2:2
+
+# reset space 1 after fullscreen if layout is messed up
+# + reset order of spaces
+cmd - b : yabai -m space one --layout stack && yabai -m space one --layout bsp  && \
+          yabai -m space one    --move 1 && \
+          yabai -m space two    --move 2 && \
+          yabai -m space three  --move 3 && \
+          yabai -m space four   --move 4 && \
+          yabai -m space five   --move 5 && \
+          yabai -m space six    --move 6 && \
+          yabai -m space seven  --move 7 && \
+          yabai -m space eight  --move 8
+# restart yabai
+cmd + shift - b : killall yabai && open ~/.config/yabai/start-yabai.app;osascript -e 'tell application id "tracesOf.Uebersicht" to refresh widget id "simple-bar-index-jsx"'
