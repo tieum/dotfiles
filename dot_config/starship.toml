@@ -12,7 +12,7 @@ format = """$aws\
             [](bg:#06969A fg:#33658A)[($jobs $cmd_duration)](bg:#33658A)\
             [](fg:#33658A)\
             $line_break\
-            $character${custom.asdf}"""
+            ${custom.chezmoi}$character${custom.asdf}"""
 
 [aws]
 format='[](#CE8500)[󰸏 $profile\($region\)](bg:#CE8500)[](fg:#CE8500)'
@@ -31,6 +31,10 @@ format = " $duration "
 min_time = 0
 show_milliseconds = true
 show_notifications = false 
+
+[custom.chezmoi]
+when = "[[ $(chezmoi status) ]]"
+format='[](fg:#fb9651)[󱏖 ](bg:#fb9651)[](fg:#fb9651)'
 
 [custom.tf]
 when = "asdf current terraform | grep -v 'No version is set'"
