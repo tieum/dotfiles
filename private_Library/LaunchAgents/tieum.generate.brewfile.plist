@@ -15,7 +15,7 @@
 	<key>StandardOutPath</key>
 	<string>/tmp/tieum.generate.brewfile.out</string>
 	<key>StartInterval</key>
-	<integer>1800</integer>
+	<integer>600</integer>
 	<key>WorkingDirectory</key>
   <string>/Users/tieum</string>
 </dict>
