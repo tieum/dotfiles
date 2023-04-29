@@ -55,7 +55,7 @@ cmd - w : yabai -m window --toggle zoom-fullscreen
 cmd - e : yabai -m window --toggle zoom-parent
 
 # launch terminal
-cmd - return : test -S /tmp/kitty.sock && /Applications/kitty.app/Contents/MacOS/kitty || /Applications/kitty.app/Contents/MacOS/kitty --listen-on unix:/tmp/kitty.sock 
+cmd - return : /Applications/kitty.app/Contents/MacOS/kitty --single-instance
 
 # toggle window split type
 cmd + shift - v : yabai -m window --toggle split
