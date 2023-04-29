@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+  <string>tieum.generate.brewfile</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>sh</string>
+		<string>-c</string>
+    <string>/opt/homebrew/bin/brew bundle dump --force --describe --no-lock --file=/Users/tieum/.config/homebrew/Brewfile</string>
+	</array>
+	<key>StandardErrorPath</key>
+	<string>/tmp/tieum.generate.brewfile.err</string>
+	<key>StandardOutPath</key>
+	<string>/tmp/tieum.generate.brewfile.out</string>
+	<key>StartInterval</key>
+	<integer>1800</integer>
+	<key>WorkingDirectory</key>
+  <string>/Users/tieum</string>
+</dict>
+</plist>
