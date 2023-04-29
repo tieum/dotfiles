@@ -78,6 +78,8 @@ brew "mpv"
 brew "neofetch"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
+# Display the PID number for a given process name
+brew "pidof"
 # Manage compile and link flags for libraries
 brew "pkg-config"
 # File browser
