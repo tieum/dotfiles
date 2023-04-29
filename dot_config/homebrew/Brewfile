@@ -8,6 +8,8 @@ brew "age"
 brew "agg"
 # Record and share terminal sessions
 brew "asciinema"
+# Aquarium animation in ASCII art
+brew "asciiquarium"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
 # Extendable version manager with support for Ruby, Node.js, Erlang & more
