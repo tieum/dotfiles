@@ -1,0 +1,110 @@
+tap "homebrew/bundle"
+tap "homebrew/cask-fonts"
+tap "homebrew/services"
+tap "koekeishiya/formulae"
+# Simple, modern, secure file encryption
+brew "age"
+# Asciicast to GIF converter
+brew "agg"
+# Record and share terminal sessions
+brew "asciinema"
+# GNU File, Shell, and Text utilities
+brew "coreutils"
+# Extendable version manager with support for Ruby, Node.js, Erlang & more
+brew "asdf"
+# Improved shell history for zsh and bash
+brew "atuin"
+# Clone of cat(1) with syntax highlighting and Git integration
+brew "bat"
+# Garbage collector for C and C++
+brew "bdw-gc"
+# Manage your dotfiles across multiple diverse machines, securely
+brew "chezmoi"
+# Container runtimes on MacOS (and Linux) with minimal setup
+brew "colima"
+# Load/unload environment variables based on $PWD
+brew "direnv"
+# Pack, ship and run any application as a lightweight container
+brew "docker"
+# Docker CLI plugin for extended build capabilities with BuildKit
+brew "docker-buildx"
+# Disk Usage/Free Utility - a better 'df' alternative
+brew "duf"
+# Classic UNIX line editor
+brew "ed"
+# Modern replacement for 'ls'
+brew "exa"
+# Collection of GNU find, xargs, and locate
+brew "findutils"
+# Command-line fuzzy finder written in Go
+brew "fzf"
+# GNU awk utility
+brew "gawk"
+# Toolkit for image loading and pixel buffer manipulation
+brew "gdk-pixbuf"
+# GitHub command-line tool
+brew "gh"
+# Syntax-highlighting pager for git and diff output
+brew "git-delta"
+# GNU implementation of the famous stream editor
+brew "gnu-sed"
+# GNU version of the tar archiving utility
+brew "gnu-tar"
+# GNU grep, egrep and fgrep
+brew "grep"
+# Improved top (interactive process viewer)
+brew "htop"
+# Lightweight and flexible command-line JSON processor
+brew "jq"
+# Tool that can switch between kubectl contexts easily and create aliases
+brew "kubectx"
+# Convert pixel information into colored ASCII art
+brew "libcaca"
+# Utility for directing compilation
+brew "make"
+# Show markdown documents on text terminals
+brew "mdcat"
+# Fast and user friendly build system
+brew "meson"
+# Media player based on MPlayer and mplayer2
+brew "mpv"
+# Fast, highly customisable system info script
+brew "neofetch"
+# Ambitious Vim-fork focused on extensibility and agility
+brew "neovim"
+# Platform built on V8 to build network applications
+brew "node"
+# Manage compile and link flags for libraries
+brew "pkg-config"
+# File browser
+brew "ranger"
+# SOcket CAT: netcat on steroids
+brew "socat"
+# Tail multiple Kubernetes pods & their containers
+brew "stern"
+# Modern SSH server for teams managing distributed infrastructure
+brew "teleport"
+# Text interface for Git repositories
+brew "tig"
+# Terminal image and video viewer
+brew "timg"
+# Display directories as trees (with optional color/HTML output)
+brew "tree"
+# Pager/text based browser
+brew "w3m"
+# Executes a program periodically, showing output fullscreen
+brew "watch"
+# JavaScript package manager
+brew "yarn"
+# Tracks most-used directories to make cd smarter
+brew "z"
+# Simple hotkey-daemon for macOS.
+brew "koekeishiya/formulae/skhd"
+# A tiling window manager for macOS based on binary space partitioning.
+brew "koekeishiya/formulae/yabai"
+# Free and open-source web browser
+cask "chromium"
+# Reimagine your terminal
+cask "fig"
+# Developer targeted fonts with a high number of glyphs
+cask "font-hack-nerd-font"
