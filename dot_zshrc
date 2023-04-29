@@ -29,7 +29,7 @@ zstyle ':omz:update' mode auto      # update automatically without asking
 
 plugins=(git zsh-autosuggestions web-search z zsh-morpho)
 
-zstyle ":morpho" screen-saver "random-ascii-clock.sh" # select screen saver "zmorpho"; available: zmorpho, zmandelbrot, zblank, pmorpho
+zstyle ":morpho" screen-saver "term-saver.sh" # select screen saver "zmorpho"; available: zmorpho, zmandelbrot, zblank, pmorpho
                                         # this  can also be a command, e.g. "cmatrix"
 #zstyle ":morpho" arguments "-s"         # arguments given to screen saver program; -s - every key press ends
 zstyle ":morpho" delay "290"            # 5 minutes before screen saver starts
