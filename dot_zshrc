@@ -27,7 +27,13 @@ zstyle ':omz:update' mode auto      # update automatically without asking
 # COMPLETION_WAITING_DOTS="true"
 
 
-plugins=(git zsh-autosuggestions web-search z)
+plugins=(git zsh-autosuggestions web-search z zsh-morpho)
+
+zstyle ":morpho" screen-saver "random-ascii-clock.sh" # select screen saver "zmorpho"; available: zmorpho, zmandelbrot, zblank, pmorpho
+                                        # this  can also be a command, e.g. "cmatrix"
+#zstyle ":morpho" arguments "-s"         # arguments given to screen saver program; -s - every key press ends
+zstyle ":morpho" delay "290"            # 5 minutes before screen saver starts
+zstyle ":morpho" check-interval "60"    # check every 1 minute if to run screen saver
 
 # source homebrew completion
 fpath+=/opt/homebrew/share/zsh/site-functions
