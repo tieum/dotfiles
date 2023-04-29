@@ -20,6 +20,10 @@ brew "atuin"
 brew "bat"
 # Garbage collector for C and C++
 brew "bdw-gc"
+# Platform built on V8 to build network applications
+brew "node"
+# Secure and free password manager for all of your devices
+brew "bitwarden-cli"
 # Manage your dotfiles across multiple diverse machines, securely
 brew "chezmoi"
 # Container runtimes on MacOS (and Linux) with minimal setup
@@ -74,8 +78,6 @@ brew "mpv"
 brew "neofetch"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
-# Platform built on V8 to build network applications
-brew "node"
 # Manage compile and link flags for libraries
 brew "pkg-config"
 # File browser
