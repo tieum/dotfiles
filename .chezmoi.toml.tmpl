@@ -1,3 +1,9 @@
+{{- $work := false -}}{{/* true if this machine should have work secrets */}}
+{{- "" -}}
+
+[data]
+    work = {{ $work }}
+
 [git]
     autoCommit = true
     autoPush = false
