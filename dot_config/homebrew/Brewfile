@@ -84,6 +84,8 @@ brew "pidof"
 brew "pkg-config"
 # File browser
 brew "ranger"
+# Unoffical Bitwarden CLI client
+brew "rbw"
 # SOcket CAT: netcat on steroids
 brew "socat"
 # Tail multiple Kubernetes pods & their containers
