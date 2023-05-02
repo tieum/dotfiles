@@ -82,6 +82,8 @@ brew "neovim"
 brew "pidof"
 # Manage compile and link flags for libraries
 brew "pkg-config"
+# Show ps output as a tree
+brew "pstree"
 # File browser
 brew "ranger"
 # Unoffical Bitwarden CLI client
