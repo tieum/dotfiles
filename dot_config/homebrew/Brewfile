@@ -94,6 +94,8 @@ brew "socat"
 brew "stern"
 # Modern SSH server for teams managing distributed infrastructure
 brew "teleport"
+# Tool to generate documentation from Terraform modules
+brew "terraform-docs"
 # Text interface for Git repositories
 brew "tig"
 # Terminal image and video viewer
