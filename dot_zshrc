@@ -73,6 +73,7 @@ export RANGER_LOAD_DEFAULT_RC=FALSE
 
 alias r=ranger
 alias k=kubectl
+export TF_PLUGIN_CACHE_DIR=$HOME/.terraform.d/plugin-cache
 export LS_COLORS="di=36:ex=36:fi=37:pi=36:so=36:bd=36:cd=36:ln=36:or=36:mi=36"
 export EXA_COLORS="ur=37:uw=37:ux=37:ue=37:gr=37:gw=37:gx=37:tr=37:tw=37:tx=37:su=37:sf=37:xa=37:sn=36:sb=36:df=36:ds=36:uu=36:un=36:gu=36:gn=36:lc=36:lm=36:ga=32:gm=36:gd=31:gv=36:gt=36:xx=37:da=37:in=36:bl=36:hd=37;04:lp=36:cc=36:"
 alias l='exa -snew -a -l -h --icons --git'
