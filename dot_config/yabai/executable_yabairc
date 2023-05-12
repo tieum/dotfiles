@@ -59,6 +59,6 @@ yabai -m space 7 --label seven
 yabai -m space 8 --label eight
 
 #set wallpaper
-osascript -e "tell application \"System Events\" to tell every desktop to set picture to \"/Users/tieum/.config/wallpapers/cassette-highres-flip.jpg\" as POSIX file"
+#osascript -e "tell application \"System Events\" to tell every desktop to set picture to \"/Users/tieum/.config/wallpapers/cassette-highres-flip.jpg\" as POSIX file"
 
 echo "yabai configuration loaded.."
