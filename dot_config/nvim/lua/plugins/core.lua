@@ -1,8 +1,23 @@
 return {
   {
-    "LazyVim/LazyVim",
+    "ellisonleao/gruvbox.nvim",
     opts = {
-      colorscheme = "catppuccin-mocha",
+      contrast = "soft",
+      transparent_mode = false,
+    },
+    config = function(_, opts)
+      require("gruvbox").setup(opts)
+    end,
+  },
+  {
+    "LazyVim/LazyVim",
+    -- opts = {
+    -- colorscheme = "catppuccin-mocha",
+    --},
+    opts = {
+      colorscheme = function()
+        require("gruvbox").load()
+      end,
     },
   },
 }
