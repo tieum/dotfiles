@@ -4,7 +4,8 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="agnoster"
+ZSH_THEME="gruvbox"
+SOLARIZED_THEME="dark"
 
 zstyle ':omz:update' mode auto      # update automatically without asking
 
@@ -71,11 +72,13 @@ export VISUAL=nvim
 export PAGER=bat
 export RANGER_LOAD_DEFAULT_RC=FALSE
 
+export PATH=$PATH:$HOME/.cargo/bin
+
 alias r=ranger
 alias k=kubectl
 export TF_PLUGIN_CACHE_DIR=$HOME/.terraform.d/plugin-cache
-export LS_COLORS="di=36:ex=36:fi=37:pi=36:so=36:bd=36:cd=36:ln=36:or=36:mi=36"
-export EXA_COLORS="ur=37:uw=37:ux=37:ue=37:gr=37:gw=37:gx=37:tr=37:tw=37:tx=37:su=37:sf=37:xa=37:sn=36:sb=36:df=36:ds=36:uu=36:un=36:gu=36:gn=36:lc=36:lm=36:ga=32:gm=36:gd=31:gv=36:gt=36:xx=37:da=37:in=36:bl=36:hd=37;04:lp=36:cc=36:"
+export LS_COLORS="di=32:ex=32:fi=37:pi=32:so=32:bd=32:cd=32:ln=32:or=32:mi=32"
+export EXA_COLORS="ur=37:uw=37:ux=37:ue=37:gr=37:gw=37:gx=37:tr=37:tw=37:tx=37:su=37:sf=37:xa=37:sn=32:sb=32:df=32:ds=32:uu=32:un=32:gu=32:gn=32:lc=32:lm=32:ga=32:gm=32:gd=31:gv=32:gt=32:xx=37:da=37:in=32:bl=32:hd=37;04:lp=32:cc=32:"
 alias l='exa -snew -a -l -h --icons --git'
 alias vi=nvim
 alias vim=nvim
