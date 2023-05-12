@@ -2,6 +2,7 @@ tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
 tap "homebrew/services"
 tap "koekeishiya/formulae"
+tap "turbot/tap"
 # Simple, modern, secure file encryption
 brew "age"
 # Asciicast to GIF converter
@@ -60,6 +61,10 @@ brew "gnu-tar"
 brew "grep"
 # Improved top (interactive process viewer)
 brew "htop"
+# Tools and libraries to manipulate images in many formats
+brew "imagemagick"
+# Image loading and rendering library
+brew "imlib2"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 # Tool that can switch between kubectl contexts easily and create aliases
@@ -72,6 +77,8 @@ brew "make"
 brew "mdcat"
 # Fast and user friendly build system
 brew "meson"
+# Remote terminal application
+brew "mosh"
 # Media player based on MPlayer and mplayer2
 brew "mpv"
 # Fast, highly customisable system info script
@@ -88,6 +95,8 @@ brew "pstree"
 brew "ranger"
 # Unoffical Bitwarden CLI client
 brew "rbw"
+# Safe, concurrent, practical language
+brew "rust"
 # SOcket CAT: netcat on steroids
 brew "socat"
 # Tail multiple Kubernetes pods & their containers
@@ -114,6 +123,8 @@ brew "z"
 brew "koekeishiya/formulae/skhd"
 # A tiling window manager for macOS based on binary space partitioning.
 brew "koekeishiya/formulae/yabai"
+# Steampipe exposes APIs and services as a high-performance relational database, giving you the ability to write SQL-based queries to explore, assess and report on dynamic data.
+brew "turbot/tap/steampipe"
 # Free and open-source web browser
 cask "chromium"
 # Reimagine your terminal
