@@ -1,10 +1,11 @@
 "$schema" = "https://starship.rs/config-schema.json"
 format = """$aws\
             $gcloud\
+            $python\
             $fill\
             ${custom.tf}${custom.tg}\
             $line_break\
-            [](#DA627D)$directory[](fg:#DA627D bg:#33658A)\
+            [](#d3869b)$directory[](fg:#d3869b bg:#33658A)\
             [ $git_branch$git_status](bg:#33658A)[ ](fg:#33658A)\
             $fill\
             [](fg:#06969A)\
@@ -19,7 +20,7 @@ format='[](#CE8500)[󰸏 $profile\($region\)](bg:#CE8500)[](fg:#CE8500)'
 
 [character]
 error_symbol = "[██](fg:#DA627D)"
-success_symbol = "[██](fg:#06969A)"
+success_symbol = "[██](fg:#89b482)"
 vicmd_symbol = "[](fg:#33658A)[ ](bg:#33658A)[](fg:#33658A)]"
 vimcmd_replace_one_symbol = "[](fg:#33658A)[綾 ](bg:#33658A)[](fg:#33658A)]"
 vimcmd_replace_symbol = "[](fg:#33658A)[凌 ](bg:#33658A)[](fg:#33658A)]"
@@ -38,7 +39,7 @@ format='[](fg:#0b5394)[ ](bg:#0b5394)[](fg:#0b5394)'
 
 [custom.chezmoi]
 when = "[[ $(chezmoi status) ]]"
-format='[](fg:#fb9651)[󱏖 ](bg:#fb9651)[](fg:#fb9651)'
+format='[](fg:#e78a4e)[󱏖 ](bg:#e78a4e)[](fg:#e78a4e)'
 
 [custom.tf]
 when = "asdf current terraform | grep -v 'No version is set'"
@@ -59,7 +60,7 @@ format = "[ $path ]($style)"
 read_only = " 🔒"
 read_only_style = "white bold"
 fish_style_pwd_dir_length = 1
-style = "bg:#DA627D"
+style = "bg:#d3869b"
 truncation_length = 2
 
 [fill]
@@ -101,7 +102,7 @@ modified = "!($count)"
 
 #renamed = "🚶($count)"
 staged = "+($count)"
-#stashed = "📦($count)"
+stashed = "📦($count)"
 #untracked = "🤷($count)"
 untracked = "?($count)"
 up_to_date = ""
@@ -123,6 +124,9 @@ symbol_threshold = 1
 disabled = false
 format = "$symbol($context)(\\($namespace\\))"
 symbol = "󱃾 "
+
+[python]
+format = '[](fg:#98971a)[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\))](fg:#414141 bg:#98971a)[](fg:#98971a)'
 
 [shell]
 disabled=false
