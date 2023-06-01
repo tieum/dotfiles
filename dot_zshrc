@@ -73,6 +73,7 @@ export PAGER=bat
 export RANGER_LOAD_DEFAULT_RC=FALSE
 
 export PATH=$PATH:$HOME/.cargo/bin
+export PATH=$PATH:/opt/homebrew/opt/libpq/bin
 
 alias r=ranger
 alias k=kubectl
