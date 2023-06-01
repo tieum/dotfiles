@@ -9,10 +9,14 @@ brew "age"
 brew "agg"
 # Record and share terminal sessions
 brew "asciinema"
+# Highly capable, feature-rich programming language
+brew "perl"
 # Aquarium animation in ASCII art
 brew "asciiquarium"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@3"
 # Extendable version manager with support for Ruby, Node.js, Erlang & more
 brew "asdf"
 # Improved shell history for zsh and bash
@@ -27,6 +31,10 @@ brew "node"
 brew "bitwarden-cli"
 # Manage your dotfiles across multiple diverse machines, securely
 brew "chezmoi"
+# C library SSHv1/SSHv2 client and server protocols
+brew "libssh"
+# Linux virtual machines
+brew "lima"
 # Container runtimes on MacOS (and Linux) with minimal setup
 brew "colima"
 # Load/unload environment variables based on $PWD
@@ -71,6 +79,8 @@ brew "jq"
 brew "kubectx"
 # Convert pixel information into colored ASCII art
 brew "libcaca"
+# Postgres C API library
+brew "libpq"
 # Utility for directing compilation
 brew "make"
 # Show markdown documents on text terminals
@@ -89,6 +99,8 @@ brew "neovim"
 brew "pidof"
 # Manage compile and link flags for libraries
 brew "pkg-config"
+# Framework for managing multi-language pre-commit hooks
+brew "pre-commit"
 # Show ps output as a tree
 brew "pstree"
 # File browser
