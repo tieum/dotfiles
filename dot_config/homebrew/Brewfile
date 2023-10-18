@@ -1,5 +1,7 @@
+tap "hashicorp/tap"
 tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
+tap "homebrew/core"
 tap "homebrew/services"
 tap "koekeishiya/formulae"
 tap "turbot/tap"
@@ -7,6 +9,10 @@ tap "turbot/tap"
 brew "age"
 # Asciicast to GIF converter
 brew "agg"
+# New file format for still image compression
+brew "jpeg-xl"
+# Codec library for encoding and decoding AV1 video streams
+brew "aom"
 # Record and share terminal sessions
 brew "asciinema"
 # Highly capable, feature-rich programming language
@@ -15,12 +21,12 @@ brew "perl"
 brew "asciiquarium"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
-# Cryptography and SSL/TLS Toolkit
-brew "openssl@3"
 # Extendable version manager with support for Ruby, Node.js, Erlang & more
 brew "asdf"
 # Improved shell history for zsh and bash
 brew "atuin"
+# Bourne-Again SHell, a UNIX command interpreter
+brew "bash"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 # Garbage collector for C and C++
@@ -31,8 +37,12 @@ brew "node"
 brew "bitwarden-cli"
 # Manage your dotfiles across multiple diverse machines, securely
 brew "chezmoi"
+# Validating, recursive, caching DNS resolver
+brew "unbound"
 # C library SSHv1/SSHv2 client and server protocols
 brew "libssh"
+# Emulator for x86 and PowerPC
+brew "qemu"
 # Linux virtual machines
 brew "lima"
 # Container runtimes on MacOS (and Linux) with minimal setup
@@ -43,12 +53,18 @@ brew "direnv"
 brew "docker"
 # Docker CLI plugin for extended build capabilities with BuildKit
 brew "docker-buildx"
+# Isolated development environments using Docker
+brew "docker-compose"
 # Disk Usage/Free Utility - a better 'df' alternative
 brew "duf"
 # Classic UNIX line editor
 brew "ed"
+# C library of Git core methods that is re-entrant and linkable
+brew "libgit2"
 # Modern replacement for 'ls'
 brew "exa"
+# Play, record, convert, and stream audio and video
+brew "ffmpeg"
 # Collection of GNU find, xargs, and locate
 brew "findutils"
 # Command-line fuzzy finder written in Go
@@ -65,10 +81,16 @@ brew "git-delta"
 brew "gnu-sed"
 # GNU version of the tar archiving utility
 brew "gnu-tar"
+# GNU Pretty Good Privacy (PGP) package
+brew "gnupg"
+# Image processing tools collection
+brew "graphicsmagick"
 # GNU grep, egrep and fgrep
 brew "grep"
 # Improved top (interactive process viewer)
 brew "htop"
+# ISO/IEC 23008-12:2017 HEIF file format decoder and encoder
+brew "libheif"
 # Tools and libraries to manipulate images in many formats
 brew "imagemagick"
 # Image loading and rendering library
@@ -77,40 +99,62 @@ brew "imlib2"
 brew "jq"
 # Tool that can switch between kubectl contexts easily and create aliases
 brew "kubectx"
+# Easily check your clusters for use of deprecated APIs
+brew "kubent"
+# Template-free customization of Kubernetes YAML manifests
+brew "kustomize"
 # Convert pixel information into colored ASCII art
 brew "libcaca"
 # Postgres C API library
 brew "libpq"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.11"
 # Utility for directing compilation
 brew "make"
+# Mac App Store command-line interface
+brew "mas"
 # Show markdown documents on text terminals
 brew "mdcat"
 # Fast and user friendly build system
 brew "meson"
 # Remote terminal application
 brew "mosh"
+# Video processing framework with simplicity in mind
+brew "vapoursynth"
+# Fork of youtube-dl with additional features and fixes
+brew "yt-dlp"
 # Media player based on MPlayer and mplayer2
 brew "mpv"
+# Open source relational database management system
+brew "mysql-client"
 # Fast, highly customisable system info script
 brew "neofetch"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
+# Port scanning utility for large networks
+brew "nmap"
+# Tool for creating identical machine images for multiple platforms
+brew "packer"
 # Display the PID number for a given process name
 brew "pidof"
 # Manage compile and link flags for libraries
 brew "pkg-config"
+# Tool for creating isolated virtual python environments
+brew "virtualenv"
 # Framework for managing multi-language pre-commit hooks
 brew "pre-commit"
 # Show ps output as a tree
 brew "pstree"
 # File browser
 brew "ranger"
-# Unoffical Bitwarden CLI client
+# Unofficial Bitwarden CLI client
 brew "rbw"
 # Safe, concurrent, practical language
 brew "rust"
 # SOcket CAT: netcat on steroids
 brew "socat"
+# Use SQL to instantly query your cloud services
+brew "steampipe"
 # Tail multiple Kubernetes pods & their containers
 brew "stern"
 # Modern SSH server for teams managing distributed infrastructure
@@ -123,23 +167,36 @@ brew "tig"
 brew "timg"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
+# High-performance HTTP accelerator
+brew "varnish"
 # Pager/text based browser
 brew "w3m"
 # Executes a program periodically, showing output fullscreen
 brew "watch"
+# Bundler for JavaScript and friends
+brew "webpack"
 # JavaScript package manager
 brew "yarn"
 # Tracks most-used directories to make cd smarter
 brew "z"
+# Boundary
+brew "hashicorp/tap/boundary"
+# Vlt CLI
+brew "hashicorp/tap/vlt"
 # Simple hotkey-daemon for macOS.
 brew "koekeishiya/formulae/skhd"
 # A tiling window manager for macOS based on binary space partitioning.
 brew "koekeishiya/formulae/yabai"
-# Steampipe exposes APIs and services as a high-performance relational database, giving you the ability to write SQL-based queries to explore, assess and report on dynamic data.
-brew "turbot/tap/steampipe"
 # Free and open-source web browser
 cask "chromium"
 # Reimagine your terminal
 cask "fig"
 # Developer targeted fonts with a high number of glyphs
 cask "font-hack-nerd-font"
+# CLI graphics framework
+cask "kui"
+mas "GarageBand", id: 682658836
+mas "iMovie", id: 408981434
+mas "Keynote", id: 409183694
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
