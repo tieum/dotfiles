@@ -1,6 +1,0 @@
-echo -n direnv: loading \~/.envrc
-export GIT_SSH_COMMAND="ssh -i ~/.ssh/tieum"
-export GIT_AUTHOR_NAME="tieum"
-export GIT_AUTHOR_EMAIL="matthieu@bluegreen.sh"
-export GIT_COMMITTER_NAME="tieum"
-export GIT_COMMITTER_EMAIL="matthieu@bluegreen.sh"
