@@ -1,7 +1,7 @@
+tap "felixkratz/formulae"
 tap "hashicorp/tap"
 tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
-tap "homebrew/core"
 tap "homebrew/services"
 tap "koekeishiya/formulae"
 tap "turbot/tap"
@@ -23,20 +23,20 @@ brew "asciiquarium"
 brew "coreutils"
 # Extendable version manager with support for Ruby, Node.js, Erlang & more
 brew "asdf"
-# Improved shell history for zsh and bash
+# Improved shell history for zsh, bash, fish and nushell
 brew "atuin"
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
+# C library of Git core methods that is re-entrant and linkable
+brew "libgit2"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 # Garbage collector for C and C++
 brew "bdw-gc"
-# Platform built on V8 to build network applications
-brew "node"
-# Secure and free password manager for all of your devices
-brew "bitwarden-cli"
 # Manage your dotfiles across multiple diverse machines, securely
 brew "chezmoi"
+# Cross-platform make
+brew "cmake"
 # Validating, recursive, caching DNS resolver
 brew "unbound"
 # C library SSHv1/SSHv2 client and server protocols
@@ -59,10 +59,10 @@ brew "docker-compose"
 brew "duf"
 # Classic UNIX line editor
 brew "ed"
-# C library of Git core methods that is re-entrant and linkable
-brew "libgit2"
 # Modern replacement for 'ls'
 brew "exa"
+# Audio codec
+brew "opus"
 # Play, record, convert, and stream audio and video
 brew "ffmpeg"
 # Collection of GNU find, xargs, and locate
@@ -99,8 +99,6 @@ brew "imlib2"
 brew "jq"
 # Tool that can switch between kubectl contexts easily and create aliases
 brew "kubectx"
-# Easily check your clusters for use of deprecated APIs
-brew "kubent"
 # Template-free customization of Kubernetes YAML manifests
 brew "kustomize"
 # Convert pixel information into colored ASCII art
@@ -133,8 +131,6 @@ brew "neofetch"
 brew "neovim"
 # Port scanning utility for large networks
 brew "nmap"
-# Tool for creating identical machine images for multiple platforms
-brew "packer"
 # Display the PID number for a given process name
 brew "pidof"
 # Manage compile and link flags for libraries
@@ -145,20 +141,20 @@ brew "virtualenv"
 brew "pre-commit"
 # Show ps output as a tree
 brew "pstree"
+# Python interface to Tcl/Tk
+brew "python-tk@3.11"
 # File browser
 brew "ranger"
 # Unofficial Bitwarden CLI client
 brew "rbw"
-# Safe, concurrent, practical language
-brew "rust"
+# Rust toolchain installer
+brew "rustup-init"
 # SOcket CAT: netcat on steroids
 brew "socat"
 # Use SQL to instantly query your cloud services
 brew "steampipe"
 # Tail multiple Kubernetes pods & their containers
 brew "stern"
-# Modern SSH server for teams managing distributed infrastructure
-brew "teleport"
 # Tool to generate documentation from Terraform modules
 brew "terraform-docs"
 # Text interface for Git repositories
@@ -173,12 +169,10 @@ brew "varnish"
 brew "w3m"
 # Executes a program periodically, showing output fullscreen
 brew "watch"
-# Bundler for JavaScript and friends
-brew "webpack"
-# JavaScript package manager
-brew "yarn"
 # Tracks most-used directories to make cd smarter
 brew "z"
+# A window border system for macOS
+brew "felixkratz/formulae/borders"
 # Boundary
 brew "hashicorp/tap/boundary"
 # Vlt CLI
@@ -186,7 +180,7 @@ brew "hashicorp/tap/vlt"
 # Simple hotkey-daemon for macOS.
 brew "koekeishiya/formulae/skhd"
 # A tiling window manager for macOS based on binary space partitioning.
-brew "koekeishiya/formulae/yabai"
+brew "koekeishiya/formulae/yabai", args: ["HEAD"]
 # Free and open-source web browser
 cask "chromium"
 # Reimagine your terminal
