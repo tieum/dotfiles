@@ -2,9 +2,16 @@
 -- Default autocmds that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/autocmds.lua
 -- Add any additional autocmds here
 --
--- Run hclfmt on .hcl files after save
+
+-- Run packer fmt on packer hcl files after save
 vim.api.nvim_create_autocmd("BufWritePost", {
-  pattern = { "*.hcl" },
+  pattern = { "*.pkr.hcl" },
+  command = "!packer fmt %",
+})
+
+-- Run hclfmt on terragrunt.hcl files after save
+vim.api.nvim_create_autocmd("BufWritePost", {
+  pattern = { "terragrunt.hcl" },
   command = "!terragrunt hclfmt %",
 })
 
