@@ -74,6 +74,7 @@ export RANGER_LOAD_DEFAULT_RC=FALSE
 
 export PATH=$PATH:$HOME/.cargo/bin
 export PATH=$PATH:/opt/homebrew/opt/libpq/bin
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 alias r=ranger
 alias k=kubectl
@@ -109,3 +110,14 @@ if [ -f '/Users/tieum/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/tieum/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/tieum/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
+
+export ASDF_GOLANG_MOD_VERSION_ENABLED=true
+. ~/.asdf/plugins/golang/set-env.zsh
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
+
+#export PATH="/Library/Developer/CommandLineTools/usr/bin:$PATH"
+cd $HOME
