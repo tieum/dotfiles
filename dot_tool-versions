@@ -1,3 +1,6 @@
 kubectl 1.25.9
 python 3.11.3 2.7.18
 helm 3.11.3
+argocd 2.8.4
+golang 1.21.3
+teleport-community 14.1.3
