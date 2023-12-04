@@ -7,8 +7,9 @@
 # see this wiki page for information:
 #  - https://github.com/koekeishiya/yabai/wiki/Installing-yabai-(latest-release)#configure-scripting-addition
 #
+launchctl unload -F /System/Library/LaunchAgents/com.apple.WindowManager.plist >/dev/null 2>&1 &
 yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
-sudo yabai --load-sa
+sudo /opt/homebrew/bin/yabai --load-sa
 #
 
 # global settings
@@ -18,7 +19,6 @@ yabai -m config \
 	window_origin_display default \
 	window_placement second_child \
 	window_zoom_persist on \
-	window_topmost off \
 	window_shadow off \
 	window_animation_duration 0.0 \
 	window_animation_frame_rate 120 \
@@ -27,13 +27,6 @@ yabai -m config \
 	normal_window_opacity 0.90 \
 	window_opacity on \
 	insert_feedback_color 0xffd75f5f \
-	active_window_border_color 0xff775759 \
-	normal_window_border_color 0xff555555 \
-	window_border_width 4 \
-	window_border_radius 12 \
-	window_border_blur off \
-	window_border_hidpi on \
-	window_border off \
 	split_ratio 0.50 \
 	split_type auto \
 	auto_balance off \
@@ -46,7 +39,16 @@ yabai -m config \
 	mouse_modifier fn \
 	mouse_action1 move \
 	mouse_action2 resize \
-	mouse_drop_action swap
+	mouse_drop_action swap \
+	window_topmost on \
+	external_bar all:0:25
+#	window_border_radius 12 \
+#	active_window_border_color 0xff775759 \
+#	normal_window_border_color 0xff555555 \
+# window_borner_width 4 \
+# window_border_blur off \
+# window_border_hidpi on \
+# window_border off \
 
 #setup space labels
 yabai -m space 1 --label one
@@ -61,4 +63,5 @@ yabai -m space 8 --label eight
 #set wallpaper
 #osascript -e "tell application \"System Events\" to tell every desktop to set picture to \"/Users/tieum/.config/wallpapers/cassette-highres-flip.jpg\" as POSIX file"
 
+borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=5.0 2>/dev/null 1>&2 &
 echo "yabai configuration loaded.."

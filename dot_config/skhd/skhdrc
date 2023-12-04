@@ -1,6 +1,8 @@
 # resize windows
-:: default : yabai -m config window_border off
-:: resize @ : yabai -m config window_border on
+#:: default : yabai -m config window_border off
+:: default : borders style=square active_color=0xff808080 inactive_color=0xff494d64 width=2.0
+#:: resize @ : yabai -m config window_border on
+:: resize @ : borders style=round width=9 active_color=0xaaffa500 inactive_color=0x00000000
 cmd - r ; resize
 resize < escape ; default
 resize < return ; default
@@ -45,7 +47,7 @@ shift + cmd - 7 : yabai -m window --space  seven; yabai -m space --focus seven
 shift + cmd - 8 : yabai -m window --space  eight; yabai -m space --focus eight
 
 # screenshot
-cmd + shift - s : screencapture -i /Users/tieum/Pictures/screenshot-$(date +%Y-%m-%d-%H%M).png
+#cmd + shift - s : screencapture -i /Users/tieum/Pictures/screenshots/screenshot-$(date +%Y-%m-%d-%H%M%S).png
 
 # close window
 cmd - q : yabai -m window --close
@@ -75,4 +77,4 @@ cmd - b : yabai -m space one --layout stack && yabai -m space one --layout bsp  
           yabai -m space seven  --move 7 && \
           yabai -m space eight  --move 8
 # restart yabai
-cmd + shift - b : killall yabai && open ~/.config/yabai/start-yabai.app;osascript -e 'tell application id "tracesOf.Uebersicht" to refresh widget id "simple-bar-index-jsx"'
+cmd + shift - b : yabai --stop-service;yabai --start-service;osascript -e 'tell application id "tracesOf.Uebersicht" to refresh widget id "simple-bar-index-jsx"'
