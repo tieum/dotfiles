@@ -1,6 +1,19 @@
 README.md
 .oh-my-zsh/cache/**
 
+{{ if stat (joinPath .chezmoi.homeDir ".ssh/tieum") }}
+.ssh/tieum
+{{ end }}
+{{ if stat (joinPath .chezmoi.homeDir ".ssh/work") }}
+.ssh/work
+{{ end }}
+{{ if stat (joinPath .chezmoi.homeDir ".ssh/tieum.pub") }}
+.ssh/tieum.pub
+{{ end }}
+{{ if stat (joinPath .chezmoi.homeDir ".ssh/work.pub") }}
+.ssh/work.pub
+{{ end }}
+
 {{ if ne .chezmoi.os "darwin" }}
 .chezmoiscripts/darwin/**
 .config/karabiner
