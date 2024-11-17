@@ -24,7 +24,7 @@ shift + cmd - up : yabai -m window --warp north
 shift + cmd - down: yabai -m window --warp south
 
 #move space to next display
-cmd - m: index=$(yabai -m query --spaces | jq 'map(select(."has-focus" == true))[].index') && yabai -m space $index --display next || yabai -m space $index --display first
+cmd - m: index=$(yabai -m query --spaces | jq -r 'map(select(."has-focus" == true))[].index') && yabai -m space $index --display next || yabai -m space $index --display first
 
 # switch to desktop with back_and_forth feature
 cmd - 1 : [[ "one" == $(yabai -m query --spaces   | jq -r 'map(select(."has-focus" == true))[-1].label') ]] && yabai -m space --focus recent || yabai -m space --focus one

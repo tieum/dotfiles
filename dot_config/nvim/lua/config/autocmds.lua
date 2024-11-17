@@ -26,3 +26,11 @@ vim.api.nvim_create_autocmd("BufWritePost", {
   pattern = { "*.py" },
   command = "!black %",
 })
+
+vim.api.nvim_create_augroup("lazyvim_last_loc", { clear = true })
+vim.api.nvim_create_augroup("checktime", { clear = true })
+-- Run js-beautify on .js files after save
+--vim.api.nvim_create_autocmd("BufWritePost", {
+--  pattern = { "*.js" },
+--  command = "!js-beautify -r %",
+--})
