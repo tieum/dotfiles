@@ -13,7 +13,7 @@ format = """$aws\
             [](bg:#06969A fg:#33658A)[($jobs $cmd_duration)](bg:#33658A)\
             [](fg:#33658A)\
             $line_break\
-            ${custom.rbw}${custom.chezmoi}$character${custom.asdf}"""
+            ${custom.chezmoi}$character${custom.asdf}"""
 command_timeout=600
 [aws]
 format='[](#CE8500)[󰸏 $profile\($region\)](bg:#CE8500)[](fg:#CE8500)'
@@ -31,11 +31,7 @@ vimcmd_visual_symbol = "[](fg:#33658A)[ ](bg:#33658A)[](fg:#33658A)]"
 format = " $duration "
 min_time = 0
 show_milliseconds = true
-show_notifications = false 
-
-[custom.rbw]
-when = "[[ $(rbw unlocked 2>&1 | grep 'agent is locked') ]]"
-format='[](fg:#0b5394)[ ](bg:#0b5394)[](fg:#0b5394)'
+show_notifications = false
 
 [custom.chezmoi]
 when = "[[ $(chezmoi status) ]]"
